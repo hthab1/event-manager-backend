@@ -44,7 +44,7 @@ export const createEvent = (req: Request, res: Response) => {
     updatedAt: new Date(),
   };
 
-  events.push(newEvent);
+  events.unshift(newEvent);
   res.status(201).json(newEvent);
 };
 
